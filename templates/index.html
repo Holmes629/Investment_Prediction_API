@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTR-8'>
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel= 'stylesheet' type= 'text/css'>
+        <link href= 'https://fonts.googleapis.com/css?family=Arimo' rel= 'stylesheet' type= 'text/css'>
+        <link href= 'https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+        <link href= 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel= 'stylesheet' tyupe= 'text/css'>
+    </head>
+    <body>
+        <div class='login'>
+            <h1> Investment Prediction </h1>
+            <form action='{{url_for('predict')}}' method= 'post' >
+                <input type='int' name= "Open" placeholder= "Enter Open value" required= 'required'>
+                <input type='int' name= "High" placeholder= "Enter High value" required= 'required'>
+                <input type='int' name= "Low" placeholder= "Enter Low value" required= 'required'>
+                <input type='int' name= "Volume" placeholder= "Emter Volume trade" required= 'required'>
+                <input type='int' name= "OpenInt" placeholder= "Enter OpenInt value" required= 'required'>
+
+                <button tyhpe= "submit" class= "btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+
+            <br>
+            <br>
+
+            {{ prediction_text }}
+        </div>
+    </body>
+</html>
